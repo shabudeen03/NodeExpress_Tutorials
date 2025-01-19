@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <%- include('navbar', {links: links}) %>
+
+        <ul>
+            <% users.forEach((user) => { %>
+                <%- include('users/user', {user: user}); %>
+            <% }); %>
+        </ul>
+
+        <!--<% const animals = ["Cat", "Dog", "Hawk"]; %>
+        <ul>
+            <% animals.map((animal) => { %>
+                <li><%= animal %>s are cute</li>
+            <% }) %>
+        </ul> -->
+
+
+    </body>
+</html>

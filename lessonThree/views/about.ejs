@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>About us</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <h1>Founders:</h1>
+        <ul>
+            <% for(let i=0; i<owners.length; i++) { %>
+                <%- include('users/user', {user:owners[i]}) %>
+                <p>
+                    <%= bios[i] %>
+                </p>
+
+                <hr />
+            <% } %>
+        </ul>
+    </body>
+</html>
