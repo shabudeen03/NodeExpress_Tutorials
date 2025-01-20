@@ -5,6 +5,7 @@ const path = require('node:path');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Only needed for POST requests in this sample web application (it is used only for requests that also contain 'data')
 app.use(express.urlencoded({ extended: true }));
 
 const { userRouter } = require('./routes/userRouter.js');
